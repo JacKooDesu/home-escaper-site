@@ -1,0 +1,108 @@
+body {
+  margin: 0 0 0 0;
+  font-family: "Noto Sans TC", "Roboto", "微軟正黑體";
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: transparent;
+
+  transition: all 0.2s;
+}
+
+.compoenet-wrapper {
+  position: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.is-current {
+  opacity: 1;
+  z-index: 10;
+  visibility: visible;
+}
+
+.is-next {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.slide-custom {
+  -webkit-transition: opacity 1.3s, visibility 1s, -webkit-transform 1s;
+  transition: opacity 1.3s, visibility 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1.3s, visibility 1s;
+  transition: transform 1s, opacity 1.3s, visibility 1s, -webkit-transform 1s;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main-selection-container {
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.main-selection {
+  width: 160px;
+  height: 40px;
+  justify-content: center;
+  top: 2px;
+  font-family: "Noto Sans TC", "Roboto", "微軟正黑體";
+  font-style: normal;
+  /* font-weight: lighter; */
+  font-size: 12px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgb(127, 127, 127);
+
+  transition: font-size 0.2s, color 0.2s;
+}
+
+.main-selection:hover {
+  font-size: 14px;
+  color: rgb(56, 56, 56);
+}
+
+.pattern-a titleText {
+  height: 10%;
+  font-size: max(2em, 5vh);
+  color: rgb(34, 34, 34);
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  font-weight: bolder;
+}
+
+.pattern-a content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 80%;
+  height: 40%;
+}
+
+@media (orientation: portrait) {
+  .pattern-a content {
+    flex-direction: column;
+    height: 60%;
+  }
+}
+
+.pattern-a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

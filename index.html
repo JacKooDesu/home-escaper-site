@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>走出家籬 - Home Escaper</title>
+    <script src="js/page-handle.js"></script>
+    <script src="js/wheel-event.js"></script>
+    <script src="js/loader.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div
+      class="container"
+      id="slide-container"
+      style="transform: translate(0px)"
+    >
+      <div id="main" class="component-wrapper slide-custom is-current">
+        <div class="slide-custom is-current" style="background-color: white">
+          <img
+            src="imgs/logo.png"
+            style="
+              position: absolute;
+              left: 50%;
+              top: 40%;
+              transform: translate(-50%, -50%);
+              display: flex;
+            "
+          />
+          <div class="main-selection-container">
+            <div style="height: 40; display: flex; justify-content: center">
+              <div class="main-selection">1F</div>
+              <div class="main-selection">2F</div>
+              <div class="main-selection">3F</div>
+            </div>
+            <div style="height: 20"></div>
+            <div style="height: 40; display: flex; justify-content: center">
+              <div class="main-selection">雜項</div>
+              <div class="main-selection">關於</div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="slide-custom is-next"
+          style="background-color: #f4eedd"
+        ></div>
+      </div>
+
+      <div id="1F" class="component-wrapper slide-custom is-next">
+        <div
+          style="background-color: rgb(255, 243, 229)"
+          class="pattern-a slide-custom is-current"
+        >
+          <titleText> 一樓客廳 </titleText>
+          <content>
+            <img src="imgs/1f/living-room_1.jpg" />
+            <img src="imgs/1f/living-room_2.jpg" />
+          </content>
+        </div>
+
+        <div
+          style="background-color: rgb(255, 243, 229)"
+          class="pattern-a slide-custom is-next"
+        >
+          <titleText> 一樓餐廳 </titleText>
+          <content>
+            <img src="imgs/1f/dining-room_1.png" />
+            <img src="imgs/1f/dining-room_2.png" />
+          </content>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
