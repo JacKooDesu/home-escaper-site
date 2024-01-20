@@ -1,6 +1,6 @@
 var wheelActivate = false;
 
-var current = 0;
+var currentChild = 0;
 var last;
 var interval = 800;
 
@@ -40,15 +40,22 @@ function changeCurrent(y) {
 
   let children = currentPage.children;
 
-  let old = current;
-  if (y > 0) current = Math.min(current + 1, children.length - 1);
-  else current = Math.max(current - 1, 0);
+  let old = currentChild;
+  if (y > 0) currentChild = Math.min(currentChild + 1, children.length - 1);
+  else currentChild = Math.max(currentChild - 1, 0);
 
-  if (old == current) return;
+  if (old == currentChild) return;
 
   children[old].classList.remove("is-current");
   children[old].classList.add("is-next");
 
-  children[current].classList.remove("is-next");
-  children[current].classList.add("is-current");
+  children[currentChild].classList.remove("is-next");
+  children[currentChild].classList.add("is-current");
+}
+
+function reloadContainer() {
+  let children = currentPage.children;
+  Array.prototype.filter.call(children, (e, index) =>
+    setActivate(e, index == currentChild)
+  );
 }

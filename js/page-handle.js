@@ -21,13 +21,11 @@ function activatePage(tag) {
 
   let old = currentPage;
   currentPage = document.getElementById(tag);
-  current = 0;
+  currentChild = 0;
+  reloadContainer();
 
-  old.classList.remove("is-current");
-  old.classList.add("is-next");
-
-  currentPage.classList.remove("is-next");
-  currentPage.classList.add("is-current");
+  setActivate(old, false);
+  setActivate(currentPage, true);
 }
 
 function setActivate(target, b) {
